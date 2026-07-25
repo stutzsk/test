@@ -1,0 +1,508 @@
+C:\Users\andre\Desktop\EXPLOIT>docker logs sweet_hoover
+
+   FastAPI   Starting production server 🚀
+
+             Searching for package file structure from directories with
+             __init__.py files
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /usr/local/lib/python3.12/site-packages/fastapi_cli/cli.py:334 in run        │
+│                                                                              │
+│   331 │                                                                      │
+│   332 │   Otherwise, it uses the first [bold]FastAPI[/bold] app found in the │
+│   333 │   """                                                                │
+│ ❱ 334 │   _run(                                                              │
+│   335 │   │   path=path,                                                     │
+│   336 │   │   host=host,                                                     │
+│   337 │   │   port=port,                                                     │
+│                                                                              │
+│ ╭─────────────── locals ───────────────╮                                     │
+│ │           app = None                 │                                     │
+│ │          host = '0.0.0.0'            │                                     │
+│ │          path = PosixPath('main.py') │                                     │
+│ │          port = 8000                 │                                     │
+│ │ proxy_headers = True                 │                                     │
+│ │        reload = False                │                                     │
+│ │     root_path = ''                   │                                     │
+│ │       workers = None                 │                                     │
+│ ╰──────────────────────────────────────╯                                     │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/fastapi_cli/cli.py:101 in _run       │
+│                                                                              │
+│    98 │   │   )                                                              │
+│    99 │   │                                                                  │
+│   100 │   │   try:                                                           │
+│ ❱ 101 │   │   │   import_data = get_import_data(path=path, app_name=app)     │
+│   102 │   │   except FastAPICLIException as e:                               │
+│   103 │   │   │   toolkit.print_line()                                       │
+│   104 │   │   │   toolkit.print(f"[error]{e}")                               │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │           app = None                                                     │ │
+│ │       command = 'run'                                                    │ │
+│ │          host = '0.0.0.0'                                                │ │
+│ │          path = PosixPath('main.py')                                     │ │
+│ │          port = 8000                                                     │ │
+│ │ proxy_headers = True                                                     │ │
+│ │        reload = False                                                    │ │
+│ │     root_path = ''                                                       │ │
+│ │   server_type = 'production'                                             │ │
+│ │       toolkit = <rich_toolkit.toolkit.RichToolkit object at              │ │
+│ │                 0x764af2fa8860>                                          │ │
+│ │       workers = None                                                     │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/fastapi_cli/discover.py:126 in       │
+│ get_import_data                                                              │
+│                                                                              │
+│   123 │   │   raise FastAPICLIException(f"Path does not exist {path}")       │
+│   124 │   mod_data = get_module_data_from_path(path)                         │
+│   125 │   sys.path.insert(0, str(mod_data.extra_sys_path))                   │
+│ ❱ 126 │   use_app_name = get_app_name(mod_data=mod_data, app_name=app_name)  │
+│   127 │                                                                      │
+│   128 │   import_string = f"{mod_data.module_import_str}:{use_app_name}"     │
+│   129                                                                        │
+│                                                                              │
+│ ╭──────────────────────────── locals ─────────────────────────────╮          │
+│ │ app_name = None                                                 │          │
+│ │ mod_data = ModuleData(                                          │          │
+│ │            │   module_import_str='main',                        │          │
+│ │            │   extra_sys_path=PosixPath('/usr/src/app'),        │          │
+│ │            │   module_paths=[                                   │          │
+│ │            │   │   PosixPath('/usr/src/app/main.py')            │          │
+│ │            │   ]                                                │          │
+│ │            )                                                    │          │
+│ │     path = PosixPath('main.py')                                 │          │
+│ ╰─────────────────────────────────────────────────────────────────╯          │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/fastapi_cli/discover.py:70 in        │
+│ get_app_name                                                                 │
+│                                                                              │
+│    67                                                                        │
+│    68 def get_app_name(*, mod_data: ModuleData, app_name: Union[str, None] = │
+│    69 │   try:                                                               │
+│ ❱  70 │   │   mod = importlib.import_module(mod_data.module_import_str)      │
+│    71 │   except (ImportError, ValueError) as e:                             │
+│    72 │   │   logger.error(f"Import error: {e}")                             │
+│    73 │   │   logger.warning(                                                │
+│                                                                              │
+│ ╭──────────────────────────── locals ─────────────────────────────╮          │
+│ │ app_name = None                                                 │          │
+│ │ mod_data = ModuleData(                                          │          │
+│ │            │   module_import_str='main',                        │          │
+│ │            │   extra_sys_path=PosixPath('/usr/src/app'),        │          │
+│ │            │   module_paths=[                                   │          │
+│ │            │   │   PosixPath('/usr/src/app/main.py')            │          │
+│ │            │   ]                                                │          │
+│ │            )                                                    │          │
+│ ╰─────────────────────────────────────────────────────────────────╯          │
+│                                                                              │
+│ /usr/local/lib/python3.12/importlib/__init__.py:90 in import_module          │
+│                                                                              │
+│    87 │   │   │   if character != '.':                                       │
+│    88 │   │   │   │   break                                                  │
+│    89 │   │   │   level += 1                                                 │
+│ ❱  90 │   return _bootstrap._gcd_import(name[level:], package, level)        │
+│    91                                                                        │
+│    92                                                                        │
+│    93 _RELOADING = {}                                                        │
+│                                                                              │
+│ ╭───── locals ─────╮                                                         │
+│ │   level = 0      │                                                         │
+│ │    name = 'main' │                                                         │
+│ │ package = None   │                                                         │
+│ ╰──────────────────╯                                                         │
+│ in _gcd_import:1387                                                          │
+│ ╭───── locals ─────╮                                                         │
+│ │   level = 0      │                                                         │
+│ │    name = 'main' │                                                         │
+│ │ package = None   │                                                         │
+│ ╰──────────────────╯                                                         │
+│ in _find_and_load:1360                                                       │
+│ ╭────────────────── locals ──────────────────╮                               │
+│ │ module = <object object at 0x764af5374060> │                               │
+│ │   name = 'main'                            │                               │
+│ ╰────────────────────────────────────────────╯                               │
+│ in _find_and_load_unlocked:1331                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │        name = 'main'                                                     │ │
+│ │      parent = ''                                                         │ │
+│ │ parent_spec = None                                                       │ │
+│ │        path = None                                                       │ │
+│ │        spec = ModuleSpec(name='main',                                    │ │
+│ │               loader=<_frozen_importlib_external.SourceFileLoader object │ │
+│ │               at 0x764af2fa92b0>, origin='/usr/src/app/main.py')         │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│ in _load_unlocked:935                                                        │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ module = <module 'main' from '/usr/src/app/main.py'>                     │ │
+│ │   spec = ModuleSpec(name='main',                                         │ │
+│ │          loader=<_frozen_importlib_external.SourceFileLoader object at   │ │
+│ │          0x764af2fa92b0>, origin='/usr/src/app/main.py')                 │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│ in exec_module:999                                                           │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │   code = <code object <module> at 0x5d41ff92b060, file                   │ │
+│ │          "/usr/src/app/main.py", line 1>                                 │ │
+│ │ module = <module 'main' from '/usr/src/app/main.py'>                     │ │
+│ │   self = <_frozen_importlib_external.SourceFileLoader object at          │ │
+│ │          0x764af2fa92b0>                                                 │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│ in _call_with_frames_removed:488                                             │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ args = (                                                                 │ │
+│ │        │   <code object <module> at 0x5d41ff92b060, file                 │ │
+│ │        "/usr/src/app/main.py", line 1>,                                  │ │
+│ │        │   {                                                             │ │
+│ │        │   │   '__name__': 'main',                                       │ │
+│ │        │   │   '__doc__': None,                                          │ │
+│ │        │   │   '__package__': '',                                        │ │
+│ │        │   │   '__loader__':                                             │ │
+│ │        <_frozen_importlib_external.SourceFileLoader object at            │ │
+│ │        0x764af2fa92b0>,                                                  │ │
+│ │        │   │   '__spec__': ModuleSpec(name='main',                       │ │
+│ │        loader=<_frozen_importlib_external.SourceFileLoader object at     │ │
+│ │        0x764af2fa92b0>, origin='/usr/src/app/main.py'),                  │ │
+│ │        │   │   '__file__': '/usr/src/app/main.py',                       │ │
+│ │        │   │   '__cached__':                                             │ │
+│ │        '/usr/src/app/__pycache__/main.cpython-312.pyc',                  │ │
+│ │        │   │   '__builtins__': {                                         │ │
+│ │        │   │   │   '__name__': 'builtins',                               │ │
+│ │        │   │   │   '__doc__': 'Built-in functions, types, exceptions,    │ │
+│ │        and other objects.\n\nThis module provides '+346,                 │ │
+│ │        │   │   │   '__package__': '',                                    │ │
+│ │        │   │   │   '__loader__': <class                                  │ │
+│ │        '_frozen_importlib.BuiltinImporter'>,                             │ │
+│ │        │   │   │   '__spec__': ModuleSpec(name='builtins', loader=<class │ │
+│ │        '_frozen_importlib.BuiltinImporter'>, origin='built-in'),         │ │
+│ │        │   │   │   '__build_class__': <built-in function                 │ │
+│ │        __build_class__>,                                                 │ │
+│ │        │   │   │   '__import__': <built-in function __import__>,         │ │
+│ │        │   │   │   'abs': <built-in function abs>,                       │ │
+│ │        │   │   │   'all': <built-in function all>,                       │ │
+│ │        │   │   │   'any': <built-in function any>,                       │ │
+│ │        │   │   │   ... +147                                              │ │
+│ │        │   │   },                                                        │ │
+│ │        │   │   'Annotated': <class 'typing.Annotated'>,                  │ │
+│ │        │   │   'load_dotenv': <function load_dotenv at 0x764af2fc82c0>,  │ │
+│ │        │   │   ... +6                                                    │ │
+│ │        │   }                                                             │ │
+│ │        )                                                                 │ │
+│ │    f = <built-in function exec>                                          │ │
+│ │ kwds = {}                                                                │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /usr/src/app/main.py:6 in <module>                                           │
+│                                                                              │
+│     3 from fastapi import FastAPI, HTTPException, Header, Response           │
+│     4 from utils.key_check import check                                      │
+│     5 from psycopg.rows import class_row                                     │
+│ ❱   6 from endpoints import stats, servers, history, random, takedown        │
+│     7                                                                        │
+│     8 import os                                                              │
+│     9 import endpoints                                                       │
+│                                                                              │
+│ /usr/src/app/endpoints/stats.py:1 in <module>                                │
+│                                                                              │
+│ ❱  1 from utils.stat_utils import stats                                      │
+│    2                                                                         │
+│    3 def run():                                                              │
+│    4 │   return {                                                            │
+│                                                                              │
+│ /usr/src/app/utils/stat_utils.py:5 in <module>                               │
+│                                                                              │
+│    2 import utils.database as database                                       │
+│    3 import utils.models as models                                           │
+│    4                                                                         │
+│ ❱  5 conn = database.pool.getconn()                                          │
+│    6 cur = conn.cursor(row_factory=class_row(models.Stats))                  │
+│    7                                                                         │
+│    8 class stats():                                                          │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ database = <module 'utils.database' from                                 │ │
+│ │            '/usr/src/app/utils/database.py'>                             │ │
+│ │   models = <module 'utils.models' from '/usr/src/app/utils/models.py'>   │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/psycopg_pool/pool.py:203 in getconn  │
+│                                                                              │
+│   200 │   │   # Re-raise the timeout exception presenting the user the globa │
+│   201 │   │   # timeout, not the per-attempt one.                            │
+│   202 │   │   except PoolTimeout:                                            │
+│ ❱ 203 │   │   │   raise PoolTimeout(                                         │
+│   204 │   │   │   │   f"couldn't get a connection after {timeout:.2f} sec"   │
+│   205 │   │   │   ) from None                                                │
+│   206                                                                        │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ deadline = 114.34217619                                                  │ │
+│ │     self = <psycopg_pool.pool.ConnectionPool 'pool-1' at 0x764af1d2cf20> │ │
+│ │  timeout = 30.0                                                          │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+╰──────────────────────────────────────────────────────────────────────────────╯
+PoolTimeout: couldn't get a connection after 30.00 sec
+
+   FastAPI   Starting production server 🚀
+
+             Searching for package file structure from directories with
+             __init__.py files
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
+
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /usr/local/lib/python3.12/site-packages/fastapi_cli/cli.py:334 in run        │
+│                                                                              │
+│   331 │                                                                      │
+│   332 │   Otherwise, it uses the first [bold]FastAPI[/bold] app found in the │
+│   333 │   """                                                                │
+│ ❱ 334 │   _run(                                                              │
+│   335 │   │   path=path,                                                     │
+│   336 │   │   host=host,                                                     │
+│   337 │   │   port=port,                                                     │
+│                                                                              │
+│ ╭─────────────── locals ───────────────╮                                     │
+│ │           app = None                 │                                     │
+│ │          host = '0.0.0.0'            │                                     │
+│ │          path = PosixPath('main.py') │                                     │
+│ │          port = 8000                 │                                     │
+│ │ proxy_headers = True                 │                                     │
+│ │        reload = False                │                                     │
+│ │     root_path = ''                   │                                     │
+│ │       workers = None                 │                                     │
+│ ╰──────────────────────────────────────╯                                     │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/fastapi_cli/cli.py:101 in _run       │
+│                                                                              │
+│    98 │   │   )                                                              │
+│    99 │   │                                                                  │
+│   100 │   │   try:                                                           │
+│ ❱ 101 │   │   │   import_data = get_import_data(path=path, app_name=app)     │
+│   102 │   │   except FastAPICLIException as e:                               │
+│   103 │   │   │   toolkit.print_line()                                       │
+│   104 │   │   │   toolkit.print(f"[error]{e}")                               │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │           app = None                                                     │ │
+│ │       command = 'run'                                                    │ │
+│ │          host = '0.0.0.0'                                                │ │
+│ │          path = PosixPath('main.py')                                     │ │
+│ │          port = 8000                                                     │ │
+│ │ proxy_headers = True                                                     │ │
+│ │        reload = False                                                    │ │
+│ │     root_path = ''                                                       │ │
+│ │   server_type = 'production'                                             │ │
+│ │       toolkit = <rich_toolkit.toolkit.RichToolkit object at              │ │
+│ │                 0x7bbab25384d0>                                          │ │
+│ │       workers = None                                                     │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/fastapi_cli/discover.py:126 in       │
+│ get_import_data                                                              │
+│                                                                              │
+│   123 │   │   raise FastAPICLIException(f"Path does not exist {path}")       │
+│   124 │   mod_data = get_module_data_from_path(path)                         │
+│   125 │   sys.path.insert(0, str(mod_data.extra_sys_path))                   │
+│ ❱ 126 │   use_app_name = get_app_name(mod_data=mod_data, app_name=app_name)  │
+│   127 │                                                                      │
+│   128 │   import_string = f"{mod_data.module_import_str}:{use_app_name}"     │
+│   129                                                                        │
+│                                                                              │
+│ ╭──────────────────────────── locals ─────────────────────────────╮          │
+│ │ app_name = None                                                 │          │
+│ │ mod_data = ModuleData(                                          │          │
+│ │            │   module_import_str='main',                        │          │
+│ │            │   extra_sys_path=PosixPath('/usr/src/app'),        │          │
+│ │            │   module_paths=[                                   │          │
+│ │            │   │   PosixPath('/usr/src/app/main.py')            │          │
+│ │            │   ]                                                │          │
+│ │            )                                                    │          │
+│ │     path = PosixPath('main.py')                                 │          │
+│ ╰─────────────────────────────────────────────────────────────────╯          │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/fastapi_cli/discover.py:70 in        │
+│ get_app_name                                                                 │
+│                                                                              │
+│    67                                                                        │
+│    68 def get_app_name(*, mod_data: ModuleData, app_name: Union[str, None] = │
+│    69 │   try:                                                               │
+│ ❱  70 │   │   mod = importlib.import_module(mod_data.module_import_str)      │
+│    71 │   except (ImportError, ValueError) as e:                             │
+│    72 │   │   logger.error(f"Import error: {e}")                             │
+│    73 │   │   logger.warning(                                                │
+│                                                                              │
+│ ╭──────────────────────────── locals ─────────────────────────────╮          │
+│ │ app_name = None                                                 │          │
+│ │ mod_data = ModuleData(                                          │          │
+│ │            │   module_import_str='main',                        │          │
+│ │            │   extra_sys_path=PosixPath('/usr/src/app'),        │          │
+│ │            │   module_paths=[                                   │          │
+│ │            │   │   PosixPath('/usr/src/app/main.py')            │          │
+│ │            │   ]                                                │          │
+│ │            )                                                    │          │
+│ ╰─────────────────────────────────────────────────────────────────╯          │
+│                                                                              │
+│ /usr/local/lib/python3.12/importlib/__init__.py:90 in import_module          │
+│                                                                              │
+│    87 │   │   │   if character != '.':                                       │
+│    88 │   │   │   │   break                                                  │
+│    89 │   │   │   level += 1                                                 │
+│ ❱  90 │   return _bootstrap._gcd_import(name[level:], package, level)        │
+│    91                                                                        │
+│    92                                                                        │
+│    93 _RELOADING = {}                                                        │
+│                                                                              │
+│ ╭───── locals ─────╮                                                         │
+│ │   level = 0      │                                                         │
+│ │    name = 'main' │                                                         │
+│ │ package = None   │                                                         │
+│ ╰──────────────────╯                                                         │
+│ in _gcd_import:1387                                                          │
+│ ╭───── locals ─────╮                                                         │
+│ │   level = 0      │                                                         │
+│ │    name = 'main' │                                                         │
+│ │ package = None   │                                                         │
+│ ╰──────────────────╯                                                         │
+│ in _find_and_load:1360                                                       │
+│ ╭────────────────── locals ──────────────────╮                               │
+│ │ module = <object object at 0x7bbab48e8060> │                               │
+│ │   name = 'main'                            │                               │
+│ ╰────────────────────────────────────────────╯                               │
+│ in _find_and_load_unlocked:1331                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │        name = 'main'                                                     │ │
+│ │      parent = ''                                                         │ │
+│ │ parent_spec = None                                                       │ │
+│ │        path = None                                                       │ │
+│ │        spec = ModuleSpec(name='main',                                    │ │
+│ │               loader=<_frozen_importlib_external.SourceFileLoader object │ │
+│ │               at 0x7bbab2538d10>, origin='/usr/src/app/main.py')         │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│ in _load_unlocked:935                                                        │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ module = <module 'main' from '/usr/src/app/main.py'>                     │ │
+│ │   spec = ModuleSpec(name='main',                                         │ │
+│ │          loader=<_frozen_importlib_external.SourceFileLoader object at   │ │
+│ │          0x7bbab2538d10>, origin='/usr/src/app/main.py')                 │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│ in exec_module:999                                                           │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │   code = <code object <module> at 0x5d3f91482520, file                   │ │
+│ │          "/usr/src/app/main.py", line 1>                                 │ │
+│ │ module = <module 'main' from '/usr/src/app/main.py'>                     │ │
+│ │   self = <_frozen_importlib_external.SourceFileLoader object at          │ │
+│ │          0x7bbab2538d10>                                                 │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│ in _call_with_frames_removed:488                                             │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ args = (                                                                 │ │
+│ │        │   <code object <module> at 0x5d3f91482520, file                 │ │
+│ │        "/usr/src/app/main.py", line 1>,                                  │ │
+│ │        │   {                                                             │ │
+│ │        │   │   '__name__': 'main',                                       │ │
+│ │        │   │   '__doc__': None,                                          │ │
+│ │        │   │   '__package__': '',                                        │ │
+│ │        │   │   '__loader__':                                             │ │
+│ │        <_frozen_importlib_external.SourceFileLoader object at            │ │
+│ │        0x7bbab2538d10>,                                                  │ │
+│ │        │   │   '__spec__': ModuleSpec(name='main',                       │ │
+│ │        loader=<_frozen_importlib_external.SourceFileLoader object at     │ │
+│ │        0x7bbab2538d10>, origin='/usr/src/app/main.py'),                  │ │
+│ │        │   │   '__file__': '/usr/src/app/main.py',                       │ │
+│ │        │   │   '__cached__':                                             │ │
+│ │        '/usr/src/app/__pycache__/main.cpython-312.pyc',                  │ │
+│ │        │   │   '__builtins__': {                                         │ │
+│ │        │   │   │   '__name__': 'builtins',                               │ │
+│ │        │   │   │   '__doc__': 'Built-in functions, types, exceptions,    │ │
+│ │        and other objects.\n\nThis module provides '+346,                 │ │
+│ │        │   │   │   '__package__': '',                                    │ │
+│ │        │   │   │   '__loader__': <class                                  │ │
+│ │        '_frozen_importlib.BuiltinImporter'>,                             │ │
+│ │        │   │   │   '__spec__': ModuleSpec(name='builtins', loader=<class │ │
+│ │        '_frozen_importlib.BuiltinImporter'>, origin='built-in'),         │ │
+│ │        │   │   │   '__build_class__': <built-in function                 │ │
+│ │        __build_class__>,                                                 │ │
+│ │        │   │   │   '__import__': <built-in function __import__>,         │ │
+│ │        │   │   │   'abs': <built-in function abs>,                       │ │
+│ │        │   │   │   'all': <built-in function all>,                       │ │
+│ │        │   │   │   'any': <built-in function any>,                       │ │
+│ │        │   │   │   ... +147                                              │ │
+│ │        │   │   },                                                        │ │
+│ │        │   │   'Annotated': <class 'typing.Annotated'>,                  │ │
+│ │        │   │   'load_dotenv': <function load_dotenv at 0x7bbab252e7a0>,  │ │
+│ │        │   │   ... +6                                                    │ │
+│ │        │   }                                                             │ │
+│ │        )                                                                 │ │
+│ │    f = <built-in function exec>                                          │ │
+│ │ kwds = {}                                                                │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /usr/src/app/main.py:6 in <module>                                           │
+│                                                                              │
+│     3 from fastapi import FastAPI, HTTPException, Header, Response           │
+│     4 from utils.key_check import check                                      │
+│     5 from psycopg.rows import class_row                                     │
+│ ❱   6 from endpoints import stats, servers, history, random, takedown        │
+│     7                                                                        │
+│     8 import os                                                              │
+│     9 import endpoints                                                       │
+│                                                                              │
+│ /usr/src/app/endpoints/stats.py:1 in <module>                                │
+│                                                                              │
+│ ❱  1 from utils.stat_utils import stats                                      │
+│    2                                                                         │
+│    3 def run():                                                              │
+│    4 │   return {                                                            │
+│                                                                              │
+│ /usr/src/app/utils/stat_utils.py:5 in <module>                               │
+│                                                                              │
+│    2 import utils.database as database                                       │
+│    3 import utils.models as models                                           │
+│    4                                                                         │
+│ ❱  5 conn = database.pool.getconn()                                          │
+│    6 cur = conn.cursor(row_factory=class_row(models.Stats))                  │
+│    7                                                                         │
+│    8 class stats():                                                          │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ database = <module 'utils.database' from                                 │ │
+│ │            '/usr/src/app/utils/database.py'>                             │ │
+│ │   models = <module 'utils.models' from '/usr/src/app/utils/models.py'>   │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /usr/local/lib/python3.12/site-packages/psycopg_pool/pool.py:203 in getconn  │
+│                                                                              │
+│   200 │   │   # Re-raise the timeout exception presenting the user the globa │
+│   201 │   │   # timeout, not the per-attempt one.                            │
+│   202 │   │   except PoolTimeout:                                            │
+│ ❱ 203 │   │   │   raise PoolTimeout(                                         │
+│   204 │   │   │   │   f"couldn't get a connection after {timeout:.2f} sec"   │
+│   205 │   │   │   ) from None                                                │
+│   206                                                                        │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ deadline = 154.975585646                                                 │ │
+│ │     self = <psycopg_pool.pool.ConnectionPool 'pool-1' at 0x7bbab10f37d0> │ │
+│ │  timeout = 30.0                                                          │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+╰──────────────────────────────────────────────────────────────────────────────╯
+PoolTimeout: couldn't get a connection after 30.00 sec
