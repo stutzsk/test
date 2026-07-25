@@ -1,4 +1,4 @@
-C:\Users\andre\Desktop\EXPLOIT>docker logs sweet_hoover
+C:\Users\andre\Desktop\EXPLOIT>docker logs loving_elgamal
 
    FastAPI   Starting production server 🚀
 
@@ -58,7 +58,7 @@ error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
 │ │     root_path = ''                                                       │ │
 │ │   server_type = 'production'                                             │ │
 │ │       toolkit = <rich_toolkit.toolkit.RichToolkit object at              │ │
-│ │                 0x764af2fa8860>                                          │ │
+│ │                 0x797c952fc5c0>                                          │ │
 │ │       workers = None                                                     │ │
 │ ╰──────────────────────────────────────────────────────────────────────────╯ │
 │                                                                              │
@@ -130,7 +130,7 @@ error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
 │ ╰──────────────────╯                                                         │
 │ in _find_and_load:1360                                                       │
 │ ╭────────────────── locals ──────────────────╮                               │
-│ │ module = <object object at 0x764af5374060> │                               │
+│ │ module = <object object at 0x797c976d0060> │                               │
 │ │   name = 'main'                            │                               │
 │ ╰────────────────────────────────────────────╯                               │
 │ in _find_and_load_unlocked:1331                                              │
@@ -141,27 +141,27 @@ error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
 │ │        path = None                                                       │ │
 │ │        spec = ModuleSpec(name='main',                                    │ │
 │ │               loader=<_frozen_importlib_external.SourceFileLoader object │ │
-│ │               at 0x764af2fa92b0>, origin='/usr/src/app/main.py')         │ │
+│ │               at 0x797c952fd4c0>, origin='/usr/src/app/main.py')         │ │
 │ ╰──────────────────────────────────────────────────────────────────────────╯ │
 │ in _load_unlocked:935                                                        │
 │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
 │ │ module = <module 'main' from '/usr/src/app/main.py'>                     │ │
 │ │   spec = ModuleSpec(name='main',                                         │ │
 │ │          loader=<_frozen_importlib_external.SourceFileLoader object at   │ │
-│ │          0x764af2fa92b0>, origin='/usr/src/app/main.py')                 │ │
+│ │          0x797c952fd4c0>, origin='/usr/src/app/main.py')                 │ │
 │ ╰──────────────────────────────────────────────────────────────────────────╯ │
 │ in exec_module:999                                                           │
 │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
-│ │   code = <code object <module> at 0x5d41ff92b060, file                   │ │
+│ │   code = <code object <module> at 0x5fab741d9060, file                   │ │
 │ │          "/usr/src/app/main.py", line 1>                                 │ │
 │ │ module = <module 'main' from '/usr/src/app/main.py'>                     │ │
 │ │   self = <_frozen_importlib_external.SourceFileLoader object at          │ │
-│ │          0x764af2fa92b0>                                                 │ │
+│ │          0x797c952fd4c0>                                                 │ │
 │ ╰──────────────────────────────────────────────────────────────────────────╯ │
 │ in _call_with_frames_removed:488                                             │
 │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
 │ │ args = (                                                                 │ │
-│ │        │   <code object <module> at 0x5d41ff92b060, file                 │ │
+│ │        │   <code object <module> at 0x5fab741d9060, file                 │ │
 │ │        "/usr/src/app/main.py", line 1>,                                  │ │
 │ │        │   {                                                             │ │
 │ │        │   │   '__name__': 'main',                                       │ │
@@ -169,10 +169,10 @@ error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
 │ │        │   │   '__package__': '',                                        │ │
 │ │        │   │   '__loader__':                                             │ │
 │ │        <_frozen_importlib_external.SourceFileLoader object at            │ │
-│ │        0x764af2fa92b0>,                                                  │ │
+│ │        0x797c952fd4c0>,                                                  │ │
 │ │        │   │   '__spec__': ModuleSpec(name='main',                       │ │
 │ │        loader=<_frozen_importlib_external.SourceFileLoader object at     │ │
-│ │        0x764af2fa92b0>, origin='/usr/src/app/main.py'),                  │ │
+│ │        0x797c952fd4c0>, origin='/usr/src/app/main.py'),                  │ │
 │ │        │   │   '__file__': '/usr/src/app/main.py',                       │ │
 │ │        │   │   '__cached__':                                             │ │
 │ │        '/usr/src/app/__pycache__/main.cpython-312.pyc',                  │ │
@@ -194,7 +194,7 @@ error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
 │ │        │   │   │   ... +147                                              │ │
 │ │        │   │   },                                                        │ │
 │ │        │   │   'Annotated': <class 'typing.Annotated'>,                  │ │
-│ │        │   │   'load_dotenv': <function load_dotenv at 0x764af2fc82c0>,  │ │
+│ │        │   │   'load_dotenv': <function load_dotenv at 0x797c953242c0>,  │ │
 │ │        │   │   ... +6                                                    │ │
 │ │        │   }                                                             │ │
 │ │        )                                                                 │ │
@@ -246,8 +246,8 @@ error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
 │   206                                                                        │
 │                                                                              │
 │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
-│ │ deadline = 114.34217619                                                  │ │
-│ │     self = <psycopg_pool.pool.ConnectionPool 'pool-1' at 0x764af1d2cf20> │ │
+│ │ deadline = 1460.550065857                                                │ │
+│ │     self = <psycopg_pool.pool.ConnectionPool 'pool-1' at 0x797c95401160> │ │
 │ │  timeout = 30.0                                                          │ │
 │ ╰──────────────────────────────────────────────────────────────────────────╯ │
 ╰──────────────────────────────────────────────────────────────────────────────╯
@@ -312,7 +312,7 @@ error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
 │ │     root_path = ''                                                       │ │
 │ │   server_type = 'production'                                             │ │
 │ │       toolkit = <rich_toolkit.toolkit.RichToolkit object at              │ │
-│ │                 0x7bbab25384d0>                                          │ │
+│ │                 0x7a4c39ee7a10>                                          │ │
 │ │       workers = None                                                     │ │
 │ ╰──────────────────────────────────────────────────────────────────────────╯ │
 │                                                                              │
@@ -384,7 +384,7 @@ error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
 │ ╰──────────────────╯                                                         │
 │ in _find_and_load:1360                                                       │
 │ ╭────────────────── locals ──────────────────╮                               │
-│ │ module = <object object at 0x7bbab48e8060> │                               │
+│ │ module = <object object at 0x7a4c3c2e0060> │                               │
 │ │   name = 'main'                            │                               │
 │ ╰────────────────────────────────────────────╯                               │
 │ in _find_and_load_unlocked:1331                                              │
@@ -395,27 +395,27 @@ error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
 │ │        path = None                                                       │ │
 │ │        spec = ModuleSpec(name='main',                                    │ │
 │ │               loader=<_frozen_importlib_external.SourceFileLoader object │ │
-│ │               at 0x7bbab2538d10>, origin='/usr/src/app/main.py')         │ │
+│ │               at 0x7a4c39f35040>, origin='/usr/src/app/main.py')         │ │
 │ ╰──────────────────────────────────────────────────────────────────────────╯ │
 │ in _load_unlocked:935                                                        │
 │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
 │ │ module = <module 'main' from '/usr/src/app/main.py'>                     │ │
 │ │   spec = ModuleSpec(name='main',                                         │ │
 │ │          loader=<_frozen_importlib_external.SourceFileLoader object at   │ │
-│ │          0x7bbab2538d10>, origin='/usr/src/app/main.py')                 │ │
+│ │          0x7a4c39f35040>, origin='/usr/src/app/main.py')                 │ │
 │ ╰──────────────────────────────────────────────────────────────────────────╯ │
 │ in exec_module:999                                                           │
 │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
-│ │   code = <code object <module> at 0x5d3f91482520, file                   │ │
+│ │   code = <code object <module> at 0x655286f48520, file                   │ │
 │ │          "/usr/src/app/main.py", line 1>                                 │ │
 │ │ module = <module 'main' from '/usr/src/app/main.py'>                     │ │
 │ │   self = <_frozen_importlib_external.SourceFileLoader object at          │ │
-│ │          0x7bbab2538d10>                                                 │ │
+│ │          0x7a4c39f35040>                                                 │ │
 │ ╰──────────────────────────────────────────────────────────────────────────╯ │
 │ in _call_with_frames_removed:488                                             │
 │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
 │ │ args = (                                                                 │ │
-│ │        │   <code object <module> at 0x5d3f91482520, file                 │ │
+│ │        │   <code object <module> at 0x655286f48520, file                 │ │
 │ │        "/usr/src/app/main.py", line 1>,                                  │ │
 │ │        │   {                                                             │ │
 │ │        │   │   '__name__': 'main',                                       │ │
@@ -423,10 +423,10 @@ error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
 │ │        │   │   '__package__': '',                                        │ │
 │ │        │   │   '__loader__':                                             │ │
 │ │        <_frozen_importlib_external.SourceFileLoader object at            │ │
-│ │        0x7bbab2538d10>,                                                  │ │
+│ │        0x7a4c39f35040>,                                                  │ │
 │ │        │   │   '__spec__': ModuleSpec(name='main',                       │ │
 │ │        loader=<_frozen_importlib_external.SourceFileLoader object at     │ │
-│ │        0x7bbab2538d10>, origin='/usr/src/app/main.py'),                  │ │
+│ │        0x7a4c39f35040>, origin='/usr/src/app/main.py'),                  │ │
 │ │        │   │   '__file__': '/usr/src/app/main.py',                       │ │
 │ │        │   │   '__cached__':                                             │ │
 │ │        '/usr/src/app/__pycache__/main.cpython-312.pyc',                  │ │
@@ -448,7 +448,7 @@ error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
 │ │        │   │   │   ... +147                                              │ │
 │ │        │   │   },                                                        │ │
 │ │        │   │   'Annotated': <class 'typing.Annotated'>,                  │ │
-│ │        │   │   'load_dotenv': <function load_dotenv at 0x7bbab252e7a0>,  │ │
+│ │        │   │   'load_dotenv': <function load_dotenv at 0x7a4c39f2a7a0>,  │ │
 │ │        │   │   ... +6                                                    │ │
 │ │        │   }                                                             │ │
 │ │        )                                                                 │ │
@@ -500,8 +500,8 @@ error connecting in 'pool-1': [Errno -8] Servname not supported for ai_socktype
 │   206                                                                        │
 │                                                                              │
 │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
-│ │ deadline = 154.975585646                                                 │ │
-│ │     self = <psycopg_pool.pool.ConnectionPool 'pool-1' at 0x7bbab10f37d0> │ │
+│ │ deadline = 1508.890403797                                                │ │
+│ │     self = <psycopg_pool.pool.ConnectionPool 'pool-1' at 0x7a4c38aef980> │ │
 │ │  timeout = 30.0                                                          │ │
 │ ╰──────────────────────────────────────────────────────────────────────────╯ │
 ╰──────────────────────────────────────────────────────────────────────────────╯
